@@ -22,27 +22,31 @@ class Homepage extends StatelessWidget {
         ],
       ),
       body:   Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(240.0),
             child: Text("tittle"
             ,style: TextStyle(
                 fontSize: 24
               ),),
           ),
-          TextField(
-            controller: _controller,
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.pink)
-                  ),
-                    labelText: 'Enter the text'
+          Container(
+            width: 300.0,
+            padding: EdgeInsets.symmetric(horizontal: 16.0 ) ,
+            child: TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.pink)
+                    ),
+                      labelText: 'Enter the text'
+              ),
             ),
           )
         ],
       ),
-      
     );
   }
 }

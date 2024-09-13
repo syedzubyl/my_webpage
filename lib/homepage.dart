@@ -22,17 +22,19 @@ class Homepage extends StatelessWidget {
         ],
       ),
       body:   Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+      //  mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.all(240.0),
+            padding: EdgeInsets.all(24.0),
             child: Text("tittle"
             ,style: TextStyle(
                 fontSize: 24
               ),),
           ),
           Container(
-            width: 300.0,
+            // width: 300.0,
+           // color: Colors.amber,
             padding: EdgeInsets.symmetric(horizontal: 16.0 ) ,
             child: TextField(
               controller: _controller,
@@ -41,9 +43,21 @@ class Homepage extends StatelessWidget {
                   borderSide: BorderSide(
                     color: Colors.pink)
                     ),
-                      labelText: 'Enter the text'
+                      labelText: 'Enter what ever the content of topics'
               ),
             ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(24.0),
+            child: Text("main content of topics :",
+            style: TextStyle(
+              fontSize: 24,
+            ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: TextField(),
           )
         ],
       ),
